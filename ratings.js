@@ -31,6 +31,11 @@ function update_target_lines() {
                 line.style.display = 'none';
             }
         }
+        if (!found) {
+            for (let line of rating_lines) {
+                line.style.display = '';
+            }
+        }
     }
 }
 
