@@ -4,6 +4,8 @@ Available at https://paul2t.github.io/chess-rating-converter/
 
 This is based on the data provided by https://chessgoals.com/rating-comparison/
 
+Here is the data in csv format : [data.csv](graphs/data.csv)
+
 Here are some graphs showing the correlation between lichess and chesscom.
 Lichess is the vertical axis, chesscom is the horizontal axis.
 
