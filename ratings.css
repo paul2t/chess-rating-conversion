@@ -7,6 +7,11 @@ body {
     font-size: 3vmax;
 }
 
+a.title {
+    color: white;
+    text-decoration: none;
+}
+
 #input-rating {
     font-size: 3vmax;
 }
@@ -49,18 +54,35 @@ td.rating-result {
 .classical {
     color: #21598d;
 }
+.classical > a {
+    color: #21598d;
+    text-decoration: none;
+}
 
 .rapid {
     color: #218d21;
+}
+.rapid > a {
+    color: #218d21;
+    text-decoration: none;
 }
 
 .blitz {
     color: #8d7021;
 }
+.blitz > a {
+    color: #8d7021;
+    text-decoration: none;
+}
 
 .bullet {
     color: #8d2121;
 }
+.bullet > a {
+    color: #8d2121;
+    text-decoration: none;
+}
+
 
 tbody tr:nth-child(odd) {
     background-color: #404040;

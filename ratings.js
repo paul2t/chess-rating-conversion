@@ -15,19 +15,38 @@ const ratings_conversions = new Map([
 document.getElementById("input-rating").addEventListener("change", (event) => on_ratings_params_changed());
 document.getElementById("input-rating-type").addEventListener("change", (event) => on_ratings_params_changed());
 init_from_url_parameter();
+var target;
 
+
+function update_target_lines() {
+    if (target != null) {
+        const rating_lines = document.getElementsByClassName("rating-line");
+
+        let found = false;
+        for (let line of rating_lines) {
+            if (line.classList.contains(target)) {
+                found = true;
+                line.style.display = '';
+            } else {
+                line.style.display = 'none';
+            }
+        }
+    }
+}
 
 function init_from_url_parameter() {
     const query_string = window.location.search;
     const url_params = new URLSearchParams(query_string);
     const rating = url_params.get('rating');
     const type = url_params.get('from');
+    target = url_params.get('to');
     
     if (rating != null)
         document.getElementById("input-rating").value = rating;
     if (type != null)
         document.getElementById("input-rating-type").value = type;
 
+    update_target_lines();
     update_ratings();
 }
 
@@ -38,7 +57,6 @@ function update_input_color() {
     const classes = input_rating_type_element.options[input_rating_type_element.selectedIndex].classList;
     input_rating_type_element.classList = [...classes];
     input_rating_value_element.classList = [...classes];
-
 }
 
 function on_ratings_params_changed() {
@@ -49,6 +67,8 @@ function on_ratings_params_changed() {
     if (input_rating_value != "")
         params.set('rating', input_rating_value)
     params.set('from', input_rating_type);
+    if (target != null)
+        params.set('to', target);
     const new_url = `${location.pathname}?${params}`;
     history.replaceState(null, '', new_url);
 

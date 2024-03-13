@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="ratings.css">
 </head>
 <body>
-    <h1>Chess rating converter</h1>
+    <h1><a href="index.html" class="title">Chess rating converter</a></h1>
     <input id="input-rating" class="blitz" type="number" min="0" max="5000" value="2000" step="50"/>
     <select id="input-rating-type" class="blitz">
         <option value="chesscom-rapid" class="rapid">Chesscom Rapid</option>
@@ -19,40 +19,40 @@
     </select>
     <br/><br/>
     <table>
-        <tr>
-            <td class="rating-type lichess classical"><span class="lichess-name">Lichess</span> <span class="classical-name">Classical</span> : </td>
+        <tr class="rating-line lichess-classical lichess classical">
+            <td class="rating-type lichess classical"><a href="index.html?to=lichess-classical"><span class="lichess-name">Lichess</span> <span class="classical-name">Classical</span></a> : </td>
             <td id="lichess-classical" class="rating-result lichess classical"></td>
         </tr>
-        <tr>
-            <td class="rating-type chesscom rapid"><span class="chesscom-name">Chesscom</span> <span class="rapid-name">Rapid</span> : </td>
+        <tr class="rating-line chesscom-rapid chesscom rapid">
+            <td class="rating-type chesscom rapid"><a href="index.html?to=chesscom-rapid"><span class="chesscom-name">Chesscom</span> <span class="rapid-name">Rapid</span></a> : </td>
             <td id="chesscom-rapid" class="rating-result chesscom rapid"></td>
         </tr>
-        <tr>
-            <td class="rating-type lichess rapid"><span class="lichess-name">Lichess</span> <span class="rapid-name">Rapid</span> : </td>
+        <tr class="rating-line lichess-rapid lichess rapid">
+            <td class="rating-type lichess rapid"><a href="index.html?to=lichess-rapid"><span class="lichess-name">Lichess</span> <span class="rapid-name">Rapid</span></a> : </td>
             <td id="lichess-rapid" class="rating-result lichess rapid"></td>
         </tr>
-        <tr>
-            <td class="rating-type chesscom blitz"><span class="chesscom-name">Chesscom</span> <span class="blitz-name">Blitz</span> : </td>
+        <tr class="rating-line chesscom-blitz chesscom blitz">
+            <td class="rating-type chesscom blitz"><a href="index.html?to=chesscom-blitz"><span class="chesscom-name">Chesscom</span> <span class="blitz-name">Blitz</span></a> : </td>
             <td id="chesscom-blitz" class="rating-result chesscom blitz"></td>
         </tr>
-        <tr>
-            <td class="rating-type lichess blitz"><span class="lichess-name">Lichess</span> <span class="blitz-name">Blitz</span> : </td>
+        <tr class="rating-line lichess-blitz lichess blitz">
+            <td class="rating-type lichess blitz"><a href="index.html?to=lichess-blitz"><span class="lichess-name">Lichess</span> <span class="blitz-name">Blitz</span></a> : </td>
             <td id="lichess-blitz" class="rating-result lichess blitz"></td>
         </tr>
-        <tr>
-            <td class="rating-type chesscom bullet"><span class="chesscom-name">Chesscom</span> <span class="bullet-name">Bullet</span> : </td>
+        <tr class="rating-line chesscom-bullet chesscom bullet">
+            <td class="rating-type chesscom bullet"><a href="index.html?to=chesscom-bullet"><span class="chesscom-name">Chesscom</span> <span class="bullet-name">Bullet</span></a> : </td>
             <td id="chesscom-bullet" class="rating-result chesscom bullet"></td>
         </tr>
-        <tr>
-            <td class="rating-type lichess bullet"><span class="lichess-name">Lichess</span> <span class="bullet-name">Bullet</span> : </td>
+        <tr class="rating-line lichess-bullet lichess bullet">
+            <td class="rating-type lichess bullet"><a href="index.html?to=lichess-bullet"><span class="lichess-name">Lichess</span> <span class="bullet-name">Bullet</span></a> : </td>
             <td id="lichess-bullet" class="rating-result lichess bullet"></td>
         </tr>
-        <tr>
-            <td class="rating-type fide classical">FIDE : </td>
+        <tr class="rating-line fide">
+            <td class="rating-type fide classical"><a href="index.html?to=fide">FIDE</a> : </td>
             <td id="fide" class="rating-result fide classical"></td>
         </tr>
-        <tr>
-            <td class="rating-type uscf classical">USCF : </td>
+        <tr class="rating-line uscf">
+            <td class="rating-type uscf classical"><a href="index.html?to=uscf">USCF</a> : </td>
             <td id="uscf" class="rating-result uscf classical"></td>
         </tr>
     </table>
