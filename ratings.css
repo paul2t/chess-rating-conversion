@@ -43,6 +43,23 @@ td.rating-type {
 
 td.rating-result {
     padding-right: 10px;
+    font-weight: bold;
+}
+
+.classical {
+    color: #21598d;
+}
+
+.rapid {
+    color: #218d21;
+}
+
+.blitz {
+    color: #8d7021;
+}
+
+.bullet {
+    color: #8d2121;
 }
 
 tbody tr:nth-child(odd) {

@@ -31,6 +31,16 @@ function init_from_url_parameter() {
     update_ratings();
 }
 
+function update_input_color() {
+    const input_rating_value_element = document.getElementById("input-rating");
+    const input_rating_type_element = document.getElementById("input-rating-type");
+
+    const classes = input_rating_type_element.options[input_rating_type_element.selectedIndex].classList;
+    input_rating_type_element.classList = [...classes];
+    input_rating_value_element.classList = [...classes];
+
+}
+
 function on_ratings_params_changed() {
     const input_rating_value = document.getElementById("input-rating").value;
     const input_rating_type = document.getElementById("input-rating-type").value;
@@ -43,12 +53,14 @@ function on_ratings_params_changed() {
     history.replaceState(null, '', new_url);
 
     update_ratings_with(input_rating_value, input_rating_type);
+    update_input_color();
 }
 
 function update_ratings() {
     const input_rating_value = document.getElementById("input-rating").value;
     const input_rating_type = document.getElementById("input-rating-type").value;
     update_ratings_with(input_rating_value, input_rating_type);
+    update_input_color();
 }
 
 function update_ratings_with(input_rating_value, input_rating_type) {
